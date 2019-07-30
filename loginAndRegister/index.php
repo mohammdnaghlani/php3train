@@ -11,9 +11,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css'>
 <link rel="stylesheet" href="<?= set_base_url('assets/css/fontiran.css') ; ?>">
+<link rel="stylesheet" href="<?= set_base_url('assets/css/alert.css') ; ?>">
 <link rel="stylesheet" href="<?= set_base_url('assets/css/style.css') ; ?>">
 </head>
 <body>
+
 <?php if(isset($_GET['regMsg']) && $_GET['regMsg'] == 'user_register') :?>
 <div class="reg">کاربر با موفقیت ثبت شد !</div>
 <?php endif;?>
@@ -129,7 +131,18 @@
 	فارسی شده توسط محمد نقلانی
 </footer>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script  src="<?= set_base_url('assets/js/alert.js') ; ?>"></script>
 <script  src="<?= set_base_url('assets/js/script.js') ; ?>"></script>
+
+<script>
+	Swal.fire({
+		title: '<?=$errors[$get_val]['title']?>',
+		text: '<?=$errors[$get_val]['text']?>',
+		type: '<?=$errors[$get_val]['type']?>',
+		timer: 3000,
+		showConfirmButton : false
+	});
+</script>
 
 </body>
 </html>

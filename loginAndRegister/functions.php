@@ -59,7 +59,7 @@ function do_login(string $email ,string $password) : bool
 function logout(){
     if(isset($_GET['logout']) && $_GET['logout'] == 'logout'){
         session_destroy();
-        header('location:' . BASE_URL );
+        header('location:' . BASE_URL);
     }
     
     return true ;

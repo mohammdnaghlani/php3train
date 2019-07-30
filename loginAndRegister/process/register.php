@@ -19,7 +19,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && $_SERVER['HTTP_ORIGIN'] == substr(BAS
     }
 
         if(!$msg){
-            $msg = register($success['username'] , $success['email'] , $success['password']) ;
+            $msg  = register($success['username'] , $success['email'] , $success['password']) ;
         }
 }else{
     $msg = 'access_denide';

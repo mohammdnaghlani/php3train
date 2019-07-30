@@ -13,6 +13,7 @@ const USER_TBL_PACH = 'db\\users.json' ;
 
 //include page
 require_once ('functions.php'); 
+require_once ('all_alert.php'); 
 
 
 //uese function 
